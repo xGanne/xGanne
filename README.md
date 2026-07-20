@@ -1,7 +1,7 @@
 <h2 align="left">Hello 👋! My name is Felipe and I'm from Brazil!</h2>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=xGanne&theme=dracula&hide_border=false" height="150" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=xGanne&theme=dracula&hide_border=false&locale=pt_BR" height="150" alt="GitHub Streak" />
   <img src="https://github-readme-stats.shion.dev/api/top-langs?username=xGanne&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph" />
 </div>
 
