@@ -1,0 +1,35 @@
+# Fluxo de trabalho para gerar as estatísticas de streak como uma imagem estática SVG.
+name: Generate Streak Stats
+
+on:
+  # Executa a cada 12 horas.
+  schedule:
+    - cron: "0 */12 * * *"
+  # Permite a execução manual.
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Ação para gerar as estatísticas do streak.
+      - name: Generate streak stats
+        uses: denvercoder1/github-readme-streak-stats@v1.3.1
+        with:
+          user: xGanne # Seu nome de usuário do GitHub.
+          theme: dracula # Tema Dracula.
+          hide_border: false # Mostra borda.
+          output_name: github-readme-streak-stats.svg # Nome do arquivo de saída.
+
+      # Commit e push do arquivo gerado de volta para o repositório.
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add github-readme-streak-stats.svg
+          git commit -m "Generated streak stats" || echo "No changes to commit"
+          git push
