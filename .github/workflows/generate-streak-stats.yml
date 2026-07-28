@@ -5,7 +5,6 @@ on:
     - cron: "0 */12 * * *"
   workflow_dispatch:
 
-# Garante permissão para o bot salvar a imagem no seu repositório
 permissions:
   contents: write
 
@@ -20,11 +19,8 @@ jobs:
       - name: Generate streak stats
         uses: denvercoder1/github-readme-streak-stats@main
         with:
-          user: xGanne
-          theme: dracula
-          hide_border: false
-          locale: pt_BR
-          output_name: github-readme-streak-stats.svg
+          options: "user=xGanne&theme=dracula&hide_border=false&locale=pt_BR"
+          path: "github-readme-streak-stats.svg"
 
       - name: Commit and push changes
         run: |
