@@ -16,9 +16,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Ação para gerar as estatísticas do streak.
+      # Ação para gerar as estatísticas do streak, AGORA USANDO A VERSÃO CORRETA @v1
       - name: Generate streak stats
-        uses: denvercoder1/github-readme-streak-stats@v1.3.1
+        uses: denvercoder1/github-readme-streak-stats@v1
         with:
           user: xGanne # Seu nome de usuário do GitHub.
           theme: dracula # Tema Dracula.
